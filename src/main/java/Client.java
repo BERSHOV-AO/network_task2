@@ -15,7 +15,6 @@ public class Client {
         System.out.println("--------------");
         try (Socket clientSocket = new Socket(host, port);
 
-
              PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
              BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()))) {
 
@@ -26,7 +25,6 @@ public class Client {
             String inYouChildStr = in.readLine();
             System.out.println("Server: " + inYouChildStr);
             out.println("no"); // yes
-            out.flush();
 
             String accessByYearsStr = in.readLine();
             System.out.println("Server: " + accessByYearsStr);
